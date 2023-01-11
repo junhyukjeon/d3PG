@@ -1,0 +1,16 @@
+name = "d3PG"
+uuid = "c2ff46fb-4f01-4bb9-8a65-4273e78fb67e"
+authors = ["Jun Hyuk Jeon <jnhykjeon@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Cropbox = "a904b226-abf1-11e9-2713-059ba252a964"
+
+[compat]
+Cropbox = "0.3"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
