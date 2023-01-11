@@ -1,3 +1,3 @@
-@testset "3PG.jl" begin
-    include("3PG.jl")
+@testset "d3PG.jl" begin
+    include("d3PG.jl")
 end
