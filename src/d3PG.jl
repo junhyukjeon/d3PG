@@ -10,6 +10,9 @@ include("WaterBalance.jl")
 include("BiomassPartition.jl")
 include("Mortality.jl")
 
+"""
+This system calculate age and stress related mortality.
+"""
 @system Model(Parameters, Climate, CanopyProduction, WaterBalance, BiomassPartition, Mortality, Controller) begin
     # Calendar variable to reference date
     calendar(context) ~ ::Calendar

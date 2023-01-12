@@ -1,3 +1,6 @@
+"""
+This system calculate age and stress related mortality.
+"""
 @system Mortality begin
     # Thinning
     

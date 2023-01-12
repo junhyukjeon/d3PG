@@ -1,5 +1,7 @@
+"""
+This system partitions NPP to tree organs and calculates litterfall and root turnover
+"""
 @system BiomassPartition begin
-    # Calculating partiioning coefficients
     m(m0, FR) => m0 + (1 - m0) * FR ~ preserve
     pFS(pfsConst, nounit(avDBH), pfsPower) => pfsConst * (avDBH ^ pfsPower) ~ track # foliage and stem partition
     pR(pRx, pRn, fPhysiology, m) => pRx * pRn / (pRn + ( pRx - pRn) * fPhysiology * m) ~ track # root partition
@@ -33,9 +35,4 @@
 
     litterfall(gammaFday, WF) => gammaFday * WF ~ track(u"kg/ha/d")
     rootTurnover(gammaRday, WR) => gammaRday * WR ~ track(u"kg/ha/d")
-    
-    #WF1(WF, incrWF, lossWF) => WF + incrWF - lossWF ~ track(u"kg/ha")
-    #WR1(WR, incrWR, lossWR) => WR + incrWR - lossWR ~ track(u"kg/ha")
-    #WS1(WS, incrWS) => WS + incrWS ~ track(u"kg/ha")
-    #TotalW1(WF1, WR1, WS1) => WF1 + WR1 + WS1 ~ track
 end

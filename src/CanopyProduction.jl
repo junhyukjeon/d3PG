@@ -1,5 +1,7 @@
+"""
+This system calculates canopy production.
+"""
 @system CanopyProduction begin
-    ## LUE modifier (temperature)
     flagTemp(tAvg, tMin, tMax) => (tAvg >= tMin && tAvg <= tMax) ~ flag
     fTemperature(tAvg, tMin, tMax, tOpt) => begin
         ((tAvg - tMin) / (tOpt - tMin)) * ((tMax - tAvg) / (tMax - tOpt)) ^ ((tMax - tOpt) / (tOpt - tMin))

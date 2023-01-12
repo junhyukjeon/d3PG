@@ -1,3 +1,6 @@
+"""
+This system keeps track of soil water balance.
+"""
 @system WaterBalance begin
     # ASW and MaxASW and pool in mm/d
     ASWday(ASW) => ASW / u"d" ~ track(u"mm/d")
