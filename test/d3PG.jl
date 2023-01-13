@@ -9,7 +9,7 @@ using TimeZones
     config = @config(
         :Clock => :step => 1u"d",
         :Calendar => :init => ZonedDateTime(1990, 6, 1, tz"Australia/Hobart"),
-        :Climate => :data => CSV.File(joinpath(@__DIR__, "weather.csv")) |> DataFrame,
+        :Climate => :data => CSV.File(joinpath("test", "weather.csv")) |> DataFrame,
         :Parameters => (;
             :iAge => 730,
             :iWF => 4000,
