@@ -107,7 +107,7 @@ This system contains all the parameters for d3PG.
     tMin ~ preserve(parameter)
     
     "Optimal temperature for growth"
-    Opt ~ preserve(parameter)
+    tOpt ~ preserve(parameter)
     
     "Maximum temperature for growth"
     tMax ~ preserve(parameter)
