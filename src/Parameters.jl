@@ -260,7 +260,7 @@ This system contains all the parameters for d3PG.
     fracBB0 ~ preserve(parameter)
     
     "Branch and bark fraction for mature stands"
-    racBB1 ~ preserve(parameter)
+    fracBB1 ~ preserve(parameter)
     
     "Age at which frac BB = (fracBB0 + fracBB1) / 2"
     tBB ~ preserve(parameter)
